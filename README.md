@@ -14,38 +14,31 @@ This is a show instruction how to make it:
 ```
 cp infra/.env.template infra/.env 
 ```
-How to make image and docker-compose:
-1. Open Git and go to docker-compose directory:
+
+Public data:
 ```
-cd Disk:/../infra_sp2/infra
+1.public IP: 62.84.121.7
+2.admin: admin password: 1995556
 ```
-2. Start docker-compose.yaml
+
+How to make a superuser in docker container:
+1. Sign in to your server (
 ```
-docker compose up -d --build
+ssh <username@><public IP>
+"passphrase"
 ```
-3. Make migrations and migrate
+2. Create superuser
 ```
-docker compose exec web python manage.py makemigrations
-docker compose exec web python manage.py migrate
-```
-4. Create superuser
-```
-winpty docker compose exec web python manage.py createsuperuser
+sudo docker-compose exec web python manage.py createsuperuser
+
 # write name
 # write email
 # write password, twice
+
 ```
-5. Add static
+3. Load database, if you want to check (dump.json)
 ```
-docker compose exec web python manage.py collectstatic --no-input
-```
-6. Load database (fixtures.json)
-```
-docker compose exec web python manage.py loaddata fixtures.json 
-```
-*7. If you want to save changes in your DB, make this command:
-```
-docker-compose exec web python manage.py dumpdata > fixtures.json
+docker compose exec web python manage.py loaddata dump.json 
 ```
 
 Congrats, now you can go to http://localhost/admin/ and sign in
