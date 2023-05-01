@@ -18,7 +18,9 @@ cp infra/.env.template infra/.env
 Public data:
 ```
 1.public IP: 62.84.121.7
-2.admin: admin password: 12qwaszx
+
+2.superuser: admin 
+  superuser password: 12qwaszx
 ```
 
 How to make a superuser in docker container:
