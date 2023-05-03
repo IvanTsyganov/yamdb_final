@@ -71,6 +71,9 @@ class Title(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ('-pub_date',)
+
 
 class ReviewCommentAbstract(models.Model):
     text = models.TextField(verbose_name='Текст')
