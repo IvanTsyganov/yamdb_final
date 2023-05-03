@@ -72,7 +72,7 @@ class Title(models.Model):
         return self.name
 
     class Meta:
-        ordering = ('-pub_date',)
+        ordering = ('name',)
 
 
 class ReviewCommentAbstract(models.Model):
