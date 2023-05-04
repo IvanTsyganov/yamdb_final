@@ -43,7 +43,7 @@ sudo docker-compose exec web python manage.py createsuperuser
 docker compose exec web python manage.py loaddata dump.json 
 ```
 
-Congrats, now you can go to http://localhost/admin/ and sign in
+Congrats, now you can go to http://<server public ip>/admin/ and sign in
 
 ## Authors:
 - Dmitriy Merkulov
