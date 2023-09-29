@@ -6,45 +6,6 @@
 This is a final version of DRF project with API module, part of python-developer course
 by yandex-practicum
 
-## Nuance*
-Now I added tools for making images and containers in Docker.
-This is a show instruction how to make it:
-
-.env making command (don't forget write username and password after):
-```
-cp infra/.env.template infra/.env 
-```
-
-Public data:
-```
-1.public IP: 62.84.121.7
-
-2.superuser: admin 
-  superuser password: 12qwaszx
-```
-
-How to make a superuser in docker container:
-1. Sign in to your server (
-```
-ssh <username@><public IP>
-"passphrase"
-```
-2. Create superuser
-```
-sudo docker-compose exec web python manage.py createsuperuser
-
-# write name
-# write email
-# write password, twice
-
-```
-3. Load database, if you want to check (dump.json)
-```
-docker compose exec web python manage.py loaddata dump.json 
-```
-
-Congrats, now you can go to http://<server public ip>/admin/ and sign in
-
 ## Authors:
 - Dmitriy Merkulov
 - Anton Ignatiev
