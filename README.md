@@ -7,8 +7,8 @@ This is a final version of DRF project with API module, part of python-developer
 by yandex-practicum
 
 ## Authors:
-- Dmitriy Merkulov
-- Anton Ignatiev
+- Dmitriy Merkulov https://github.com/CreedOfFear
+- Anton Ignatiev https://github.com/anign
 - Ivan Tsyganov
 
 ## Description 
